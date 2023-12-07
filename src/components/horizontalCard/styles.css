@@ -1,0 +1,63 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.container .cardBox {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100px;
+}
+
+.cardBox .cardBoxHeader .cardBoxImage {
+    width: 200px;
+    height: 100px;
+    border-radius: 12px;
+}
+
+.cardBox .cardBoxBody {
+    padding: 20px 20px 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cardBoxBody .cardBoxName {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    width: 150px;
+}
+
+.cardBoxBody .cardBoxPrice {
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.cardBoxClose {
+    position: absolute;
+    right: 13px;
+    top: 10px;
+}
+
+.cardBoxDeleteBtn {
+    font-size: 16px;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 786px) {
+    .cardBoxTop .cardBoxName {
+        font-size: 14px;
+    }
+}

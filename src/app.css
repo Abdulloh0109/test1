@@ -1,0 +1,32 @@
+body {
+    font-family: Inter !important;
+}
+
+.root {
+    padding: 30px;
+}
+
+.cardBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 1220px) {
+    .cardBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

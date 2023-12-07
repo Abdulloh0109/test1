@@ -34,7 +34,7 @@
     color: #000;
     font-size: 16px;
     font-weight: normal;
-    width: 150px;
+    width: 300px;
 }
 
 .cardBoxBody .cardBoxPrice {
@@ -56,8 +56,71 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1220px) {
+    .cardBoxBody .cardBoxName {
+        font-size: 15px;
+        width: 180px;
+    }
+}
+
 @media only screen and (max-width: 786px) {
-    .cardBoxTop .cardBoxName {
+    .container .cardBox {
+        height: 80px;
+    }
+
+    .cardBox .cardBoxHeader .cardBoxImage {
+        width: 100px;
+        height: 80px;
+        border-radius: 14px;
+    }
+
+    .cardBox .cardBoxBody {
+        padding: 15px 15px 15px 0;
+        gap: 10px;
+    }
+
+    .cardBoxBody .cardBoxName {
         font-size: 14px;
+        width: 150px;
+    }
+
+    .cardBoxBody .cardBoxPrice {
+        color: #000;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .cardBoxClose {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .cardBoxDeleteBtn {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .cardBoxBody .cardBoxName {
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .cardBoxBody .cardBoxPrice {
+        color: #000;
+        font-weight: normal;
+        font-size: 12px;
+    }
+
+    .cardBoxClose {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .cardBoxDeleteBtn {
+        font-size: 12px;
     }
 }

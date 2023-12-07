@@ -8,7 +8,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { cart } = useContext(CartContext);
 
-
   return (
     <header>
       <h1>Logo</h1>

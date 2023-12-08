@@ -12,12 +12,14 @@ export default function Modal({ setIsOpen }) {
       <div className="darkBG" onClick={() => setIsOpen(false)} />
       <div className="centered">
         <div className="modal">
+
           <div className="modalHeader">
             <h5 className="heading">Your Basket</h5>
+            <button className="closeBtn" onClick={() => setIsOpen(false)}>
+              <RiCloseLine />
+            </button>
           </div>
-          <button className="closeBtn" onClick={() => setIsOpen(false)}>
-            <RiCloseLine style={{ marginBottom: "-3px" }} />
-          </button>
+
           <div className="modalContent">
             {cart.map((item) => (
               <HorizontalCard
@@ -28,13 +30,13 @@ export default function Modal({ setIsOpen }) {
                 image={item.image}
               />
             ))}
+          </div>
 
+          <div className="footer">
             <hr className="line" />
             <div className="priceBox">
-              <h4>Total price</h4>
-              <h5>
-                {cart.reduce((total, item) => (total += item.price), 0)}$
-              </h5>
+              <h4>Total price:</h4>
+              <h5>{cart.reduce((total, item) => (total += item.price), 0)}$</h5>
             </div>
           </div>
         </div>
